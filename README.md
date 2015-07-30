@@ -3,6 +3,8 @@
 Expose Process Environment via
 [expvar](https://golang.org/pkg/expvar/) in Go.
 
+[![GoDoc](https://godoc.org/github.com/bakins/envexpvar?status.svg)](https://godoc.org/github.com/bakins/envexpvar)[![CircleCI](https://circleci.com/gh/bakins/envexpvar.png?circle-token=:circle-token)](https://circleci.com/gh/bakins/envexpvar)
+
 ## Usage:
 
 In your go code simply:

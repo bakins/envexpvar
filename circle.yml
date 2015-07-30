@@ -9,8 +9,7 @@ test:
         pwd: bin/example
 
 deployment:
-    aws:
+    testing:
       branch: master
-      aws:
-        commands:
-          - aws s3 cp $CIRCLE_ARTIFACTS/envexpvar s3://$BUCKET/envexpvar/$CIRCLE_SHA1/envexpvar
+      commands:
+        - aws s3 cp $CIRCLE_ARTIFACTS/envexpvar s3://$BUCKET/envexpvar/$CIRCLE_SHA1/envexpvar

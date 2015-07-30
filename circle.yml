@@ -5,11 +5,11 @@ dependencies:
 
 test:
   post:
-    - go build -o $CIRCLE_ARTIFACTS/envexpvar:
+    - go build envexpvar:
         pwd: bin/example
 
 deployment:
     testing:
       branch: master
       commands:
-        - aws s3 cp $CIRCLE_ARTIFACTS/envexpvar s3://$BUCKET/envexpvar/$CIRCLE_SHA1/envexpvar
+        - aws s3 cp bin/example/envexpvar s3://$BUCKET/envexpvar/$CIRCLE_SHA1/envexpvar

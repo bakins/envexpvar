@@ -1,0 +1,33 @@
+---
+version: 0.0
+os: linux
+files:
+  - source: /
+  - destination: /opt/envexpvar
+
+permissions:
+  - object: /opt/myapp
+    pattern: "**"
+    owner: root
+    group: root
+    mode: 655
+    type:
+      - file
+
+hooks:
+  ApplicationStop:
+    - location: stop.sh
+      timeout: 300
+      runas: root
+  BeforeInstall:
+    - location: before.sh
+      timeout: 120
+      runas: root
+  AfterInstall:
+    - location: after.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: start.sh
+      timeout: 120
+      runas: root

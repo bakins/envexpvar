@@ -5,7 +5,7 @@ dependencies:
 
 test:
   post:
-    - go build -o app/envexpvar:
+    - go build -o ../../app/envexpvar:
         pwd: bin/example
 
 deployment:

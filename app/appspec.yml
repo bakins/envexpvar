@@ -5,15 +5,6 @@ files:
   - source: /
   - destination: /opt/envexpvar
 
-permissions:
-  - object: /opt/myapp
-    pattern: "**"
-    owner: root
-    group: root
-    mode: 655
-    type:
-      - file
-
 hooks:
   ApplicationStop:
     - location: stop.sh

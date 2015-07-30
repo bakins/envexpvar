@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir -p /opt/envexpvar
+
 mkdir -p /etc/services/envexpvar
 
 cat <<EOF > /etc/services/envexpvar/run

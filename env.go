@@ -8,6 +8,7 @@ import (
 	"syscall"
 )
 
+// Env returns the current OS environment for this running process.
 func Env() map[string]string {
 	vals := syscall.Environ()
 	e := make(map[string]string, len(vals))

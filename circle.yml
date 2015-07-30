@@ -2,4 +2,4 @@
 test:
   post:
     - go build -o $CIRCLE_ARTIFACTS/envexpvar
-      pwd: bin/example
+        pwd: bin/example

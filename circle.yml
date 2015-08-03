@@ -5,12 +5,13 @@ dependencies:
 
 test:
   post:
-    - go build -o ../../app/envexpvar:
+    - go build -o $CIRCLE_ARTIFACTS/envexpvar:
         pwd: cmd/example
 
 deployment:
     testing:
       branch: master
       commands:
+        - cp $CIRCLE_ARTIFACTS/envexpvar app/
         - tar -czf app.tar.gz -C app .
         - aws s3 cp app.tar.gz s3://$BUCKET/envexpvar/$CIRCLE_SHA1/envexpvar.tar.gz
